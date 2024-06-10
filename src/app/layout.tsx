@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/context/auth-context";
 import { Toaster } from "sonner";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager, sendGAEvent } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,6 +29,11 @@ export default function RootLayout({
             </iframe>
         </noscript>
         <AuthProvider>
+        <button
+        onClick={() => sendGAEvent({ event: 'buttonClicked', value: 'xyz' })}
+      >
+        Send Event
+      </button>
           {children}
           <Toaster position="top-right" />
         </AuthProvider>
