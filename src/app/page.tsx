@@ -1,9 +1,15 @@
 "use client";
 import Layout from "@/layout/Layout";
+import { sendGAEvent } from "@next/third-parties/google";
 
 export default function Home() {
   return (
     <Layout>
+      <button
+        onClick={() => sendGAEvent({ event: 'buttonClicked', value: 'xyz' })}
+      >
+        Send Event
+      </button>
       <div className="min-h-[90vh] flex justify-center items-center bg-custombg bg-cover">
         <div className="text-center">
           <h1 className=" bg-gradient-to-r from-red-600 via-gray-500 to-indigo-400 md:text-8xl sm:text-6xl text-5xl font-extrabold text-transparent bg-clip-text">Welcome To Home Page</h1>
