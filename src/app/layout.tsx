@@ -18,8 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-     <script src="https://smtpjs.com/v3/smtp.js"></script>
-      <body className={inter.className}>
+      <body className={inter.className} >
         <AuthProvider>
           {children}
           <Toaster position="top-right"/>
