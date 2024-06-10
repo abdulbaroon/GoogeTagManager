@@ -11,7 +11,7 @@ export const ProtectedRoute = ({ children }: { children: ReactNode }) => {
     if (!session) {
       router.push("Login");
     }
-  }, []);
+  }, [router]);
   
   return <>{children}</>;
 
