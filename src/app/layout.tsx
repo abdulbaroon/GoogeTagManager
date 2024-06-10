@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/context/auth-context";
 import { Toaster } from "sonner";
+import GoogleTagManager from "@/components/custom/GoogleTagManager";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <html>
+        <GoogleTagManager/>
+      </html>
       <body className={inter.className} >
         <AuthProvider>
           {children}
