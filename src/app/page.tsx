@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <Layout>
       <button
-        onClick={() => sendGAEvent({ event: 'buttonClicked', value: 'xyz' })}
+        onClick={() => sendGAEvent({ event: 'buttonClicked', value: '10101010' })}
       >
         Send Event
       </button>
